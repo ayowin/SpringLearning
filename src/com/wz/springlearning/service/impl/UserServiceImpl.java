@@ -1,10 +1,12 @@
 package com.wz.springlearning.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.wz.springlearning.dao.UserDao;
 import com.wz.springlearning.service.UserService;
 
+@Service
 public class UserServiceImpl implements UserService {
     
     @Autowired

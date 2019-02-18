@@ -8,7 +8,9 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="com.wz.springlearning">
+	<context:component-scan base-package="com.wz.springlearning" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 
 	<bean id="user" class="com.wz.springlearning.entities.User">
@@ -20,8 +22,11 @@
 		class="com.wz.springlearning.dao.impl.UserDaoImpl">
 	</bean>
 
+	<!-- 
 	<bean id="userService"
 		class="com.wz.springlearning.service.impl.UserServiceImpl">
 	</bean>
+	 -->
+
 
 </beans>

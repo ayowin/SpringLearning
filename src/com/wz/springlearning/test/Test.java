@@ -13,9 +13,11 @@ public class Test {
 
 	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:beans.xml");
 	
-	UserService userService = (UserService)applicationContext.getBean("userService");
+//	UserService userService = (UserService)applicationContext.getBean("userService");
+//	
+//	System.out.println(userService);
 	
-	System.out.println(userService);
+	System.out.println(applicationContext.getBean("userServiceImpl"));
 	
     }
 
